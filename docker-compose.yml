@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"        # host:container
+    volumes:
+      - ./app:/app/app:rw  # hot-reload v kontejneru při změně kódu
+    restart: unless-stopped
